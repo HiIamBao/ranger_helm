@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mysql-custom-config
-  namespace: trino
+  namespace: ranger
 data:
   mysql.custom.conf: |
     [mysqld]
@@ -14,7 +14,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ranger-admin-mysql
-  namespace: trino
+  namespace: ranger
 spec:
   ports:
     - name: tcp
@@ -28,7 +28,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
-  namespace: trino
+  namespace: ranger
 spec:
   selector:
     matchLabels:
