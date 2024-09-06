@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ranger-admin
-          image: egdsandaru/apache-ranger-admin:1.0.0
+          image: baofci/ranger:latest
           volumeMounts:
             - name: install-config
               mountPath: /opt/ranger-2.1.0-admin/install.properties
